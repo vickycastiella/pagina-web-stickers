@@ -1,0 +1,389 @@
+@charset "UTF-8";
+body {
+  background-color: #1a1a1a;
+  color: #fff;
+  padding: 25px;
+  padding-top: 150px; /* Ajuste el padding superior para evitar que el contenido se superponga con el nav */
+}
+
+/* Header */
+header {
+  width: 100%;
+  background-color: #333;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+header .logo {
+  width: 80px;
+}
+header .nombre {
+  font-size: 24px;
+  color: #ff4da6;
+  margin-left: 10px;
+}
+header nav {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+header nav .navbar-nav {
+  display: flex;
+  gap: 20px;
+}
+header nav .navbar-nav .nav-link {
+  font-size: 16px;
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 16px;
+  transition: background-color 0.3s;
+}
+header nav .navbar-nav .nav-link:hover {
+  background-color: #ff4da6;
+}
+
+/* Sección Hero */
+.hero {
+  text-align: center;
+  padding: 50px 20px;
+}
+.hero h2 {
+  font-size: 36px;
+  color: #ff4da6;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+.hero p {
+  font-size: 18px;
+  color: #fff;
+  margin-bottom: 40px;
+}
+
+/* Imágenes */
+.imagenes img {
+  max-width: 100%;
+  height: auto;
+}
+.imagenes .imagengift {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  padding: 20px 0;
+  text-align: center;
+}
+footer .footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+footer .footer-container .redes-sociales {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px; /* Ajusta el valor según el espacio deseado */
+}
+footer .footer-container .redes-sociales img {
+  width: 50px; /* Cambiado a width: 50px; */
+  transition: transform 0.3s;
+}
+footer .footer-container .redes-sociales img:hover {
+  transform: scale(1.02);
+}
+footer .footer-container .metodos-pago img {
+  width: 200px;
+}
+
+#redes-footer img {
+  width: 50px;
+}
+
+#metodos-footer img {
+  width: 200px;
+}
+
+/* Estilos Responsivos */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .menu {
+    flex-direction: column;
+    align-items: center;
+  }
+  .imagenes {
+    flex-direction: column;
+  }
+  .imagengift {
+    width: 200px;
+  }
+  .navbar-collapse {
+    justify-content: center;
+  }
+  .navbar-nav {
+    text-align: center;
+    width: 100%;
+  }
+  .navbar-nav .nav-item {
+    width: 100%;
+  }
+  .navbar-nav .nav-link {
+    padding: 15px 0;
+  }
+}
+/* Sección de Productos */
+.productos {
+  text-align: center;
+  padding: 50px 0;
+}
+.productos h2 {
+  font-size: 28px;
+  color: #ff4da6;
+  margin-bottom: 20px;
+}
+.productos .contenedor-productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+.productos .contenedor-productos .tarjeta-producto {
+  background: #222;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.productos .contenedor-productos .tarjeta-producto:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 4px 10px rgba(255, 77, 166, 0.5);
+}
+.productos .contenedor-productos .tarjeta-producto img {
+  width: 100%;
+  border-radius: 5px;
+}
+.productos .contenedor-productos .tarjeta-producto h3 {
+  font-size: 20px;
+  color: #ff4da6;
+  margin: 10px 0;
+}
+.productos .contenedor-productos .tarjeta-producto .precio {
+  font-size: 18px;
+  color: #ffd700;
+  margin-bottom: 10px;
+}
+
+/* Sección de Preguntas Frecuentes */
+.preguntas-frecuentes {
+  text-align: center;
+  padding: 50px 0;
+  background-color: #222;
+}
+.preguntas-frecuentes h2 {
+  font-size: 28px;
+  color: #ff4da6;
+  margin-bottom: 20px;
+}
+.preguntas-frecuentes .contenedor-preguntas {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+.preguntas-frecuentes .contenedor-preguntas .pregunta {
+  background-color: #333;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  /* Usamos la pseudoclase :checked para mostrar la respuesta cuando el checkbox está marcado */
+}
+.preguntas-frecuentes .contenedor-preguntas .pregunta:hover {
+  background-color: #444;
+  margin-bottom: 10px;
+}
+.preguntas-frecuentes .contenedor-preguntas .pregunta .titulo-pregunta {
+  font-size: 22px;
+  color: #ffd700;
+  cursor: pointer;
+  margin-bottom: 10px;
+  display: block;
+}
+.preguntas-frecuentes .contenedor-preguntas .pregunta .respuesta {
+  transition: max-height 0.3s ease-out;
+  overflow: hidden;
+  max-height: 0;
+  font-size: 16px;
+  color: #fff;
+  display: none;
+  margin-top: 10px;
+}
+.preguntas-frecuentes .contenedor-preguntas .pregunta .respuesta.active {
+  display: block;
+}
+.preguntas-frecuentes .contenedor-preguntas .pregunta .ocultar-respuesta:checked + .titulo-pregunta + .respuesta {
+  max-height: 500px;
+}
+
+/* Sección Nosotros */
+.nosotros {
+  padding: 50px 0;
+  text-align: center;
+}
+.nosotros h2 {
+  font-size: 32px;
+  color: #ff4da6;
+  margin-bottom: 20px;
+}
+.nosotros .mision-vision {
+  display: flex;
+  justify-content: space-around;
+  gap: 30px;
+  margin-bottom: 50px;
+}
+.nosotros .mision-vision .mision, .nosotros .mision-vision .vision {
+  background: #222;
+  padding: 20px;
+  border-radius: 10px;
+  width: 45%;
+}
+.nosotros .mision-vision .mision h3, .nosotros .mision-vision .vision h3 {
+  font-size: 24px;
+  color: #ff4da6;
+  margin-bottom: 15px;
+}
+.nosotros .mision-vision .mision p, .nosotros .mision-vision .vision p {
+  font-size: 18px;
+  color: #fff;
+}
+.nosotros .equipo h3 {
+  font-size: 28px;
+  color: #ff4da6;
+  margin-bottom: 20px;
+}
+.nosotros .equipo .miembros-equipo {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.nosotros .equipo .miembros-equipo .miembro {
+  width: 250px;
+  background: #222;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+}
+.nosotros .equipo .miembros-equipo .miembro img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+.nosotros .equipo .miembros-equipo .miembro h4 {
+  font-size: 20px;
+  color: #ff4da6;
+}
+.nosotros .equipo .miembros-equipo .miembro p {
+  font-size: 16px;
+  color: #fff;
+}
+
+/* Sección Contacto */
+.contacto {
+  padding: 50px 0;
+  text-align: center;
+}
+.contacto h2 {
+  font-size: 32px;
+  color: #ff4da6;
+  margin-bottom: 20px;
+}
+.contacto p {
+  font-size: 18px;
+  color: #fff;
+  margin-bottom: 40px;
+}
+.contacto .form-contacto button:focus {
+  outline: 3px solid #ff4da6;
+}
+.contacto .form-contacto .formulario-contacto {
+  background: #222;
+  padding: 30px;
+  border-radius: 10px;
+  width: 50%;
+  margin: auto;
+}
+.contacto .form-contacto .formulario-contacto h3 {
+  font-size: 28px;
+  color: #ff4da6;
+  margin-bottom: 20px;
+}
+.contacto .form-contacto .formulario-contacto label {
+  font-size: 18px;
+  color: #fff;
+  margin-top: 10px;
+  display: block;
+}
+.contacto .form-contacto .formulario-contacto input,
+.contacto .form-contacto .formulario-contacto textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  border: none;
+  border-radius: 5px;
+  background: #333;
+  color: #fff;
+  font-size: 16px;
+}
+.contacto .form-contacto .formulario-contacto button {
+  background: #ff4da6;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.contacto .form-contacto .formulario-contacto button:hover {
+  background: #d14085;
+}
+.contacto .form-contacto .formulario-contacto form {
+  display: flex;
+  flex-direction: column;
+}
+.contacto .form-contacto .formulario-contacto label,
+.contacto .form-contacto .formulario-contacto input,
+.contacto .form-contacto .formulario-contacto textarea,
+.contacto .form-contacto .formulario-contacto button {
+  width: 100%;
+  margin-bottom: 10px;
+}
+.contacto .informacion-contacto {
+  margin-top: 40px;
+}
+.contacto .informacion-contacto h3 {
+  font-size: 28px;
+  color: #ff4da6;
+  margin-bottom: 15px;
+}
+.contacto .informacion-contacto ul {
+  list-style: none;
+  padding: 0;
+  color: #fff;
+}
+.contacto .informacion-contacto ul li {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+/*# sourceMappingURL=style.css.map */
