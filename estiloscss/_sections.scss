@@ -1,0 +1,228 @@
+/* Sección de Preguntas Frecuentes */
+.preguntas-frecuentes {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #222;
+  
+    h2 {
+      font-size: 28px;
+      color: #ff4da6;
+      margin-bottom: 20px;
+    }
+  
+    .contenedor-preguntas {
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+  
+      .pregunta {
+        background-color: #333;
+        padding: 15px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+  
+        &:hover {
+          background-color: #444;
+          margin-bottom: 10px;
+        }
+  
+        .titulo-pregunta {
+          font-size: 22px;
+          color: #ffd700;
+          cursor: pointer;
+          margin-bottom: 10px;
+          display: block;
+        }
+  
+        .respuesta {
+          transition: max-height 0.3s ease-out;
+          overflow: hidden;
+          max-height: 0;
+          font-size: 16px;
+          color: #fff;
+          display: none;
+          margin-top: 10px;
+  
+          &.active {
+            display: block;
+          }
+        }
+  
+        .ocultar-respuesta:checked + .titulo-pregunta + .respuesta {
+          max-height: 500px;
+        }
+      }
+    }
+  }
+  
+  /* Sección Nosotros */
+  .nosotros {
+    padding: 50px 0;
+    text-align: center;
+  
+    h2 {
+      font-size: 32px;
+      color: #ff4da6;
+      margin-bottom: 20px;
+    }
+  
+    .mision-vision {
+        @include mixin.flex-center(row, space-around, stretch);
+        gap: 30px;
+        margin-bottom: 50px;
+  
+      .mision, .vision {
+        background: #222;
+        padding: 20px;
+        border-radius: 10px;
+        width: 45%;
+  
+        h3 {
+          font-size: 24px;
+          color: #ff4da6;
+          margin-bottom: 15px;
+        }
+  
+        p {
+          font-size: 18px;
+          color: #fff;
+        }
+      }
+    }
+  
+    .equipo {
+      h3 {
+        font-size: 28px;
+        color: #ff4da6;
+        margin-bottom: 20px;
+      }
+  
+      .miembros-equipo {
+        @include mixin.flex-center();
+        gap: 30px;
+        flex-wrap: wrap;
+  
+        .miembro {
+          width: 250px;
+          background: #222;
+          padding: 15px;
+          border-radius: 10px;
+          text-align: center;
+  
+          img {
+            width: 100%;
+            height: auto;
+            border-radius: 50%;
+            margin-bottom: 15px;
+          }
+  
+          h4 {
+            font-size: 20px;
+            color: #ff4da6;
+          }
+  
+          p {
+            font-size: 16px;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+  
+  /* Sección Contacto */
+  .contacto {
+    padding: 50px 0;
+    text-align: center;
+  
+    h2 {
+      font-size: 32px;
+      color: $color-principal;
+      margin-bottom: 20px;
+    }
+  
+    p {
+      font-size: 18px;
+      color: $color-texto;
+      margin-bottom: 40px;
+    }
+  
+    .form-contacto {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 20px;
+  
+      .formulario-contacto {
+        background: #222;
+        padding: 40px;
+        border-radius: 12px;
+        width: 100%;
+        max-width: 600px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  
+        h3 {
+          font-size: 26px;
+          color: $color-principal;
+          margin-bottom: 25px;
+        }
+  
+        form {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+        }
+  
+        label {
+          font-size: 16px;
+          color: $color-texto;
+          text-align: left;
+        }
+  
+        input,
+        textarea {
+          width: 100%;
+          padding: 12px 15px;
+          border: none;
+          border-radius: 6px;
+          background: #333;
+          color: #fff;
+          font-size: 16px;
+  
+          &:focus {
+            outline: 2px solid $color-principal;
+          }
+        }
+  
+        button {
+          @include button-style;
+          margin-top: 10px;
+        }
+      }
+    }
+  
+    .informacion-contacto {
+      margin-top: 50px;
+  
+      h3 {
+        font-size: 24px;
+        color: $color-principal;
+        margin-bottom: 15px;
+      }
+  
+      ul {
+        list-style: none;
+        padding: 0;
+  
+        li {
+          font-size: 18px;
+          margin: 8px 0;
+          color: $color-texto;
+        }
+      }
+    }
+  }
+  
+  
+  
+  

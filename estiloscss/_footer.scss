@@ -1,0 +1,40 @@
+footer {
+    background-color: #333;
+    padding: 20px 0;
+    text-align: center;
+  
+    .footer-container {
+        @include mixin.flex-center(row, space-between, center);
+        flex-wrap: wrap;
+            
+  
+        .redes-sociales {
+            @include mixin.flex-center();
+            gap: 10px;
+  
+        img {
+          width: 50px;
+          transition: transform 0.3s;
+  
+          &:hover {
+            transform: scale(1.02);
+          }
+        }
+      }
+  
+      .metodos-pago {
+        img {
+          width: 200px;
+        }
+      }
+    }
+  }
+  
+  #redes-footer img {
+    width: 50px;
+  }
+  
+  #metodos-footer img {
+    width: 200px;
+  }
+  
